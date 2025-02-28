@@ -1,6 +1,6 @@
 {
   "name": "factorio-blueprint-decoded-types",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This is a simple package that decode and also types factorio base64 blueprints",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,10 +10,6 @@
     "build": "tsup",
     "lint": "tsc",
     "ci:publish": "pnpm build && changeset publish --access public"
-  },
-  "publishConfig": {
-    "provenance": true,
-    "access": "public"
   },
   "keywords": [
     "factorio"
