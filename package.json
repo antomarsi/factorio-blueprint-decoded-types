@@ -1,6 +1,6 @@
 {
   "name": "factorio-blueprint-decoded-types",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is a simple package that decode and also types factorio base64 blueprints",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
