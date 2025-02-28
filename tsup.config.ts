@@ -1,5 +1,5 @@
 import { defineConfig } from 'tsup';
- 
+
 export default defineConfig({
     format: ['cjs', 'esm'],
     entry: ['./src/index.ts'],
@@ -7,4 +7,9 @@ export default defineConfig({
     shims: true,
     skipNodeModulesBundle: true,
     clean: true,
+    outExtension({ format }) {
+        return {
+            js: format === "cjs" ? ".cjs" : ".mjs",
+        }
+    }
 });

@@ -7,13 +7,27 @@
   "types": "./dist/index.d.ts",
   "author": "antomarsi",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "lint": "tsc",
+    "ci:publish": "pnpm build && changeset publish --access public"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
   },
   "keywords": [
     "factorio"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.28.1",
     "@types/pako": "^2.0.3",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
